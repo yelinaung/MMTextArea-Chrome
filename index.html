@@ -11,17 +11,28 @@
   <div class="pure-g">
     <div class="pure-u-12-24">
       <textarea id="zg" class="zg" style="margin:10px" placeholder="Paste Zawgyi contents here"></textarea>
+      <button class="copy-zg-btn button-small pure-button" data-clipboard-action="copy" data-clipboard-target="#zg"
+        style="margin: 10px;">
+        Copy Zg
+      </button>
+      <button class="copy-uni-btn button-small pure-button" data-clipboard-action="copy" data-clipboard-target="#uni"
+        style="margin: 10px;">
+        Copy Uni
+      </button>
     </div>
     <div class="pure-u-12-24">
       <textarea id="uni" class="uni" style="margin:10px" placeholder="Paste Unicode contents here"></textarea>
     </div>
   </div>
   <div class="about">
-    <p>MMTextArea is the open sourced on <a href="http://www.github.com/yelinaung/MMTextArea-Chrome">GitHub</a> and it uses the <a href="http://www.github.com/Rabbit-Converter/Rabbit">Rabbit Converter</a>.
+    <p>MMTextArea is the open sourced on <a href="http://www.github.com/yelinaung/MMTextArea-Chrome">GitHub</a> and it
+      uses the <a href="http://www.github.com/Rabbit-Converter/Rabbit">Rabbit Converter</a>.
     </p>
   </div>
 </body>
+<script src="clipboard.min.js"></script>
 <script src="background.js"></script>
 <script src="rabbit.js"></script>
 <script src="my_script.js"></script>
+
 </html>

@@ -7,19 +7,19 @@
   src: url('fonts/pyidaungsu.ttf') format('truetype');
 }
 .zg {
-  width: 90%;
-  height: 90vh;
+  width: 75%;
+  height: 50vh;
   font-family: Zawgyi-One;
-  font-size: 14px;
+  font-size: 18px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .uni {
-  width: 90%;
-  height: 90vh;
+  width: 75%;
+  height: 50vh;
   font-family: PyiDaungSu;
-  font-size: 14px;
+  font-size: 18px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -27,5 +27,5 @@
 
 .about {
   width: 50%;
-    margin: 0 auto;
+  margin: 0 auto;
 }

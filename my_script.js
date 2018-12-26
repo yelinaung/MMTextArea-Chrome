@@ -1,15 +1,30 @@
-var zgInput = document.getElementById('zg');
-if (zgInput.addEventListener) {
-  zgInput.addEventListener('input', function() {
-    var uniOutput = zg2uni(zgInput.value);
-    document.getElementById('uni').innerHTML = uniOutput;
-  }, false);
+
+
+function convert(input, output, from_to) {
+  var func;
+  if (from_to == "uni_to_zg") {
+    func = uni2zg;
+  } else {
+    func = zg2uni;
+  }
+  if (input.addEventListener) {
+    input.addEventListener('input', function () {
+      var outputValue = func(input.value);
+      output.innerHTML = outputValue;
+    }, false);
+  } else if (input.attachEvent) {
+    input.attachEvent('onpropertychange', function () {
+      var outputValue = func(input.value);
+      output.innerHTML = outputValue;
+    });
+  }
 }
 
+var zgInput = document.getElementById('zg');
 var uniInput = document.getElementById('uni');
-if (uniInput.addEventListener) {
-  uniInput.addEventListener('input', function() {
-    var zgOutput = uni2zg(uniInput.value);
-    document.getElementById('zg').innerHTML = zgOutput;
-  }, false);
-}
+
+convert(uniInput, zgInput, "uni_to_zg");
+convert(zgInput, uniInput, "zg_to_uni");
+
+var clipboard1 = new ClipboardJS(".copy-zg-btn");
+var clipboard2 = new ClipboardJS(".copy-uni-btn");
